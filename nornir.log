@@ -1,0 +1,1070 @@
+2023-03-28 15:39:29,506 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-28 15:39:29,507 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-28 15:39:29,507 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 15:39:29,507 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-28 15:39:29,507 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 15:39:29,508 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-28 15:39:29,508 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 15:39:29,508 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-28 15:39:29,508 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-28 15:41:35,770 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-28 15:41:35,771 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-28 15:41:35,771 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-28 15:41:35,771 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 15:41:35,772 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 15:41:35,772 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 15:41:35,772 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-28 15:41:35,772 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-28 15:41:35,772 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-28 15:41:35,800 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-28 15:41:35,800 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-28 15:41:35,800 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 15:41:35,801 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 15:41:35,801 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 15:41:35,802 - nornir.core.task -    ERROR -      start() - Host 'br1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 39, in run_job
+    job = params.pop(0)
+IndexError: pop from empty list
+
+2023-03-28 15:41:35,802 - nornir.core.task -    ERROR -      start() - Host 'br1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 40, in run_job
+    task.run(task=job, params=params)
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'str' object has no attribute '__name__'
+
+2023-03-28 15:41:35,802 - nornir.core.task -    ERROR -      start() - Host 'pe1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 40, in run_job
+    task.run(task=job, params=params)
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'str' object has no attribute '__name__'
+
+2023-03-28 15:41:35,802 - nornir.core.task -    ERROR -      start() - Host 'pe1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 40, in run_job
+    task.run(task=job, params=params)
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'str' object has no attribute '__name__'
+
+2023-03-28 15:43:20,333 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-28 15:43:20,335 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-28 15:43:20,335 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 15:43:20,335 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-28 15:43:20,336 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 15:43:20,336 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-28 15:43:20,336 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 15:43:20,336 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-28 15:43:20,337 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-28 15:43:20,366 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 3 hosts
+2023-03-28 15:43:20,366 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 15:43:20,367 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 15:43:20,367 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 15:43:20,368 - nornir.core.task -    ERROR -      start() - Host 'br1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 40, in run_job
+    task.run(task=job, params=params)
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'str' object has no attribute '__name__'
+
+2023-03-28 15:43:20,368 - nornir.core.task -    ERROR -      start() - Host 'pe1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 40, in run_job
+    task.run(task=job, params=params)
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'str' object has no attribute '__name__'
+
+2023-03-28 15:43:20,369 - nornir.core.task -    ERROR -      start() - Host 'pe1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 40, in run_job
+    task.run(task=job, params=params)
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'str' object has no attribute '__name__'
+
+2023-03-28 15:45:05,284 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 3 hosts
+2023-03-28 15:45:05,285 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 15:45:05,285 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 15:45:05,286 - nornir.core.task -    ERROR -      start() - Host 'pe1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 38, in run_job
+    params = jobs[task.host.name]
+NameError: name 'jobs' is not defined
+
+2023-03-28 15:45:05,286 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 15:45:05,286 - nornir.core.task -    ERROR -      start() - Host 'pe1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 38, in run_job
+    params = jobs[task.host.name]
+NameError: name 'jobs' is not defined
+
+2023-03-28 15:45:05,286 - nornir.core.task -    ERROR -      start() - Host 'br1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 38, in run_job
+    params = jobs[task.host.name]
+NameError: name 'jobs' is not defined
+
+2023-03-28 15:47:15,842 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {'jobs': {'pe1.gs': [<function hello_world_1 at 0x7f5b4185f550>, 'parm1', 'parm2'], 'pe1.eqam7': [<function hello_world_2 at 0x7f5b417f4a60>, 'parm3', 'parm4'], 'br1.gs': [<function hello_world_1 at 0x7f5b4185f550>, 'parm5', 'parm6']}} on 3 hosts
+2023-03-28 15:47:15,842 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 15:47:15,843 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-28 15:47:15,843 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 15:47:15,843 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 15:47:15,843 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-28 15:47:15,843 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-28 15:53:55,056 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-28 15:53:55,057 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-28 15:53:55,057 - nornir.core.task -    ERROR -      start() - Host 'br1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: run_job() missing 1 required positional argument: 'jobs'
+
+2023-03-28 15:53:55,057 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 15:53:55,057 - nornir.core.task -    ERROR -      start() - Host 'br1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: run_job() missing 1 required positional argument: 'jobs'
+
+2023-03-28 15:53:55,060 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 15:53:55,060 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 15:53:55,060 - nornir.core.task -    ERROR -      start() - Host 'pe1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: run_job() missing 1 required positional argument: 'jobs'
+
+2023-03-28 15:53:55,060 - nornir.core.task -    ERROR -      start() - Host 'pe1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: run_job() missing 1 required positional argument: 'jobs'
+
+2023-03-28 15:54:13,834 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {'jobs': {'pe1.gs': [<function hello_world_1 at 0x7fbe4f502310>, 'parm1', 'parm2'], 'pe1.eqam7': [<function hello_world_2 at 0x7fbe4f4ab820>, 'parm3', 'parm4'], 'br1.gs': [<function hello_world_1 at 0x7fbe4f502310>, 'parm5', 'parm6'], 'br1.eqam7': [<function hello_world_2 at 0x7fbe4f4ab820>]}} on 4 hosts
+2023-03-28 15:54:13,834 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-28 15:54:13,835 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 15:54:13,835 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-28 15:54:13,835 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 15:54:13,835 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 15:54:13,835 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-28 15:54:13,836 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-28 15:54:13,836 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-28 15:57:08,759 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {'jobs': {'pe1.gs': [<function hello_world_1 at 0x7f3a753ef310>, 'parm1', 'parm2'], 'pe1.eqam7': [<function hello_world_2 at 0x7f3a75396820>, 'parm3', 'parm4'], 'br1.gs': [<function hello_world_1 at 0x7f3a753ef310>, 'parm5', 'parm6'], 'br1.eqam7': [<function hello_world_2 at 0x7f3a75396820>]}} on 4 hosts
+2023-03-28 15:57:08,759 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-28 15:57:08,760 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-28 15:57:08,760 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 15:57:08,760 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-28 15:57:08,760 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 15:57:08,760 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 15:57:08,761 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-28 15:57:08,761 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-28 16:00:40,410 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {'jobs': {'pe1.gs': [<function hello_world_1 at 0x7f6065491310>, 'parm1', 'parm2'], 'pe1.eqam7': [<function hello_world_2 at 0x7f606543a820>, 'parm3', 'parm4'], 'br1.gs': [<function hello_world_1 at 0x7f6065491310>, 'parm5', 'parm6'], 'br1.eqam7': [<function hello_world_2 at 0x7f606543a820>]}} on 4 hosts
+2023-03-28 16:00:40,410 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-28 16:00:40,410 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-28 16:00:40,411 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 16:00:40,411 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 16:00:40,411 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-28 16:00:40,411 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 16:00:40,411 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-28 16:00:40,412 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-28 16:02:27,318 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {'jobs': {'pe1.gs': [<function hello_world_1 at 0x7f7759317310>, 'parm1', 'parm2'], 'pe1.eqam7': [<function hello_world_2 at 0x7f77592bf820>, 'parm3', 'parm4'], 'br1.gs': [<function hello_world_1 at 0x7f7759317310>, 'parm5', 'parm6'], 'br1.eqam7': [<function hello_world_2 at 0x7f77592bf820>]}} on 4 hosts
+2023-03-28 16:02:27,318 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-28 16:02:27,319 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 16:02:27,319 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-28 16:02:27,319 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 16:02:27,319 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-28 16:02:27,319 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 16:02:27,320 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-28 16:02:27,320 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-28 16:09:49,317 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {'jobs': {'pe1.gs': [<function hello_world_1 at 0x7f3315966310>, 'parm1', 'parm2'], 'pe1.eqam7': [<function hello_world_2 at 0x7f331590d820>, 'parm3', 'parm4'], 'br1.gs': [<function hello_world_1 at 0x7f3315966310>, 'parm5', 'parm6'], 'br1.eqam7': [<function hello_world_2 at 0x7f331590d820>]}} on 4 hosts
+2023-03-28 16:09:49,317 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-28 16:09:49,318 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 16:09:49,318 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-28 16:09:49,318 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 16:09:49,318 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-28 16:09:49,318 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 16:09:49,319 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-28 16:09:49,320 - nornir.core.task -    ERROR -      start() - Host 'br1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 46, in run_job
+    result=f"{task.host.name} running job {job.__name__} with parameters {params}"
+NameError: name 'job' is not defined
+
+2023-03-28 16:09:49,320 - nornir.core.task -    ERROR -      start() - Host 'br1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 46, in run_job
+    result=f"{task.host.name} running job {job.__name__} with parameters {params}"
+NameError: name 'job' is not defined
+
+2023-03-28 16:09:49,320 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-28 16:09:49,320 - nornir.core.task -    ERROR -      start() - Host 'pe1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 46, in run_job
+    result=f"{task.host.name} running job {job.__name__} with parameters {params}"
+NameError: name 'job' is not defined
+
+2023-03-28 16:09:49,321 - nornir.core.task -    ERROR -      start() - Host 'pe1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 46, in run_job
+    result=f"{task.host.name} running job {job.__name__} with parameters {params}"
+NameError: name 'job' is not defined
+
+2023-03-28 16:13:05,119 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {'jobs': {'pe1.gs': [<function hello_world_1 at 0x7f3b31c73310>, 'parm1', 'parm2'], 'pe1.eqam7': [<function hello_world_2 at 0x7f3b31c1c820>, 'parm3', 'parm4'], 'br1.gs': [<function hello_world_1 at 0x7f3b31c73310>, 'parm5', 'parm6'], 'br1.eqam7': [<function hello_world_2 at 0x7f3b31c1c820>]}} on 4 hosts
+2023-03-28 16:13:05,120 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-28 16:13:05,120 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 16:13:05,121 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 16:13:05,121 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 16:13:05,122 - nornir.core.task -    ERROR -      start() - Host 'br1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 40, in run_job
+    task.run(task=job, params=params)
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'tuple' object has no attribute '__name__'
+
+2023-03-28 16:13:05,123 - nornir.core.task -    ERROR -      start() - Host 'pe1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 40, in run_job
+    task.run(task=job, params=params)
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'tuple' object has no attribute '__name__'
+
+2023-03-28 16:13:05,123 - nornir.core.task -    ERROR -      start() - Host 'br1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 40, in run_job
+    task.run(task=job, params=params)
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'tuple' object has no attribute '__name__'
+
+2023-03-28 16:13:05,123 - nornir.core.task -    ERROR -      start() - Host 'pe1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 40, in run_job
+    task.run(task=job, params=params)
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'tuple' object has no attribute '__name__'
+
+2023-03-28 16:13:50,587 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {'jobs': {'pe1.gs': [<function hello_world_1 at 0x7fbfc0bae310>, 'parm1', 'parm2'], 'pe1.eqam7': [<function hello_world_2 at 0x7fbfc0b56820>, 'parm3', 'parm4'], 'br1.gs': [<function hello_world_1 at 0x7fbfc0bae310>, 'parm5', 'parm6'], 'br1.eqam7': [<function hello_world_2 at 0x7fbfc0b56820>]}} on 4 hosts
+2023-03-28 16:13:50,587 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-28 16:13:50,587 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 16:13:50,588 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-28 16:13:50,588 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 16:13:50,588 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 16:13:50,588 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-28 16:13:50,589 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-28 16:13:50,589 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-28 16:18:53,730 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {'jobs': {'pe1.gs': [<function hello_world_1 at 0x7f7d72d52310>, 'parm1', 'parm2'], 'pe1.eqam7': [<function hello_world_2 at 0x7f7d72cf9820>, 'parm3', 'parm4'], 'br1.gs': [<function hello_world_1 at 0x7f7d72d52310>, 'parm5', 'parm6'], 'br1.eqam7': [<function hello_world_2 at 0x7f7d72cf9820>]}} on 4 hosts
+2023-03-28 16:18:53,730 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-28 16:18:53,731 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-28 16:18:53,731 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 16:18:53,731 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 16:18:53,731 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 16:18:53,731 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-28 16:18:53,732 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-28 16:18:53,732 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-28 16:20:23,808 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 3 hosts
+2023-03-28 16:20:23,809 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 16:20:23,809 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 16:20:23,810 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 16:20:23,810 - nornir.core.task -    ERROR -      start() - Host 'br1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: run_job() missing 1 required positional argument: 'jobs'
+
+2023-03-28 16:20:23,810 - nornir.core.task -    ERROR -      start() - Host 'pe1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: run_job() missing 1 required positional argument: 'jobs'
+
+2023-03-28 16:20:23,810 - nornir.core.task -    ERROR -      start() - Host 'pe1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: run_job() missing 1 required positional argument: 'jobs'
+
+2023-03-28 16:20:59,222 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 3 hosts
+2023-03-28 16:20:59,223 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 16:20:59,223 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-28 16:20:59,223 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 16:20:59,223 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 16:20:59,224 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-28 16:20:59,223 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-28 16:21:56,985 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 3 hosts
+2023-03-28 16:21:56,985 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 16:21:56,986 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 16:21:56,986 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-28 16:21:56,986 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 16:21:56,986 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-28 16:21:56,987 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-28 16:32:30,078 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 3 hosts
+2023-03-28 16:32:30,078 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 16:32:30,079 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 16:32:30,079 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 16:32:30,080 - nornir.core.task -    ERROR -      start() - Host 'br1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 43, in run_job
+    print(locals.get(job.__name__))
+AttributeError: 'builtin_function_or_method' object has no attribute 'get'
+
+2023-03-28 16:32:30,081 - nornir.core.task -    ERROR -      start() - Host 'pe1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 43, in run_job
+    print(locals.get(job.__name__))
+AttributeError: 'builtin_function_or_method' object has no attribute 'get'
+
+2023-03-28 16:32:30,082 - nornir.core.task -    ERROR -      start() - Host 'pe1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 43, in run_job
+    print(locals.get(job.__name__))
+AttributeError: 'builtin_function_or_method' object has no attribute 'get'
+
+2023-03-28 16:32:58,879 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 3 hosts
+2023-03-28 16:32:58,879 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 16:32:58,880 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 16:32:58,881 - nornir.core.task -    ERROR -      start() - Host 'br1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 45, in run_job
+    task.run(task=job2, params=params)
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'NoneType' object has no attribute '__name__'
+
+2023-03-28 16:32:58,881 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 16:32:58,881 - nornir.core.task -    ERROR -      start() - Host 'pe1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 45, in run_job
+    task.run(task=job2, params=params)
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'NoneType' object has no attribute '__name__'
+
+2023-03-28 16:32:58,881 - nornir.core.task -    ERROR -      start() - Host 'pe1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 45, in run_job
+    task.run(task=job2, params=params)
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'NoneType' object has no attribute '__name__'
+
+2023-03-28 16:33:25,827 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 3 hosts
+2023-03-28 16:33:25,827 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 16:33:25,828 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-28 16:33:25,828 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 16:33:25,828 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-28 16:33:25,828 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 16:33:25,829 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-28 16:33:51,992 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 3 hosts
+2023-03-28 16:33:51,993 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 16:33:51,993 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-28 16:33:51,993 - nornir.core.task -    ERROR -      start() - Host 'br1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 49, in run_job
+    result=f"{task.host.name} running job {job.__name__} with parameters {params} and {job2.__name__}"
+AttributeError: 'NoneType' object has no attribute '__name__'
+
+2023-03-28 16:33:51,993 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 16:33:51,993 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-28 16:33:51,994 - nornir.core.task -    ERROR -      start() - Host 'pe1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 49, in run_job
+    result=f"{task.host.name} running job {job.__name__} with parameters {params} and {job2.__name__}"
+AttributeError: 'NoneType' object has no attribute '__name__'
+
+2023-03-28 16:33:51,994 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 16:33:51,994 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-28 16:33:51,994 - nornir.core.task -    ERROR -      start() - Host 'pe1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 49, in run_job
+    result=f"{task.host.name} running job {job.__name__} with parameters {params} and {job2.__name__}"
+AttributeError: 'NoneType' object has no attribute '__name__'
+
+2023-03-28 16:34:11,497 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 3 hosts
+2023-03-28 16:34:11,497 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 16:34:11,497 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 16:34:11,498 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-28 16:34:11,498 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 16:34:11,498 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-28 16:34:11,498 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-28 16:36:23,990 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 3 hosts
+2023-03-28 16:36:23,991 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 16:36:23,991 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-28 16:36:23,991 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 16:36:23,992 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-28 16:36:23,992 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 16:36:23,992 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-28 16:36:53,143 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 3 hosts
+2023-03-28 16:36:53,144 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 16:36:53,144 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 16:36:53,144 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-28 16:36:53,145 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-28 16:36:53,145 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 16:36:53,145 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-28 16:38:51,693 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 3 hosts
+2023-03-28 16:38:51,694 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 16:38:51,694 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-28 16:38:51,694 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 16:38:51,694 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 16:38:51,695 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-28 16:38:51,695 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-28 16:38:51,696 - nornir.core.task -    ERROR -      start() - Host 'pe1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 50, in run_job
+    result=f"{task.host.name} running job {job.__name__!r} with parameters {params} and {job2}"
+NameError: name 'job2' is not defined
+
+2023-03-28 16:38:51,696 - nornir.core.task -    ERROR -      start() - Host 'pe1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 50, in run_job
+    result=f"{task.host.name} running job {job.__name__!r} with parameters {params} and {job2}"
+NameError: name 'job2' is not defined
+
+2023-03-28 16:38:51,696 - nornir.core.task -    ERROR -      start() - Host 'br1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 50, in run_job
+    result=f"{task.host.name} running job {job.__name__!r} with parameters {params} and {job2}"
+NameError: name 'job2' is not defined
+
+2023-03-28 16:39:24,347 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 3 hosts
+2023-03-28 16:39:24,348 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 16:39:24,348 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-28 16:39:24,348 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 16:39:24,348 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 16:39:24,349 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-28 16:39:24,349 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-28 16:43:01,366 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 3 hosts
+2023-03-28 16:43:01,367 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 16:43:01,367 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 16:43:01,367 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 16:43:01,368 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-28 16:43:01,368 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-28 16:43:01,368 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-28 16:43:24,120 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 3 hosts
+2023-03-28 16:43:24,121 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 16:43:24,121 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-28 16:43:24,121 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 16:43:24,122 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 16:43:24,122 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-28 16:43:24,122 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-28 16:45:13,996 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 3 hosts
+2023-03-28 16:45:13,996 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 16:45:13,996 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 16:45:13,997 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-28 16:45:13,997 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-28 16:45:13,997 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 16:45:13,998 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-28 16:56:29,433 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 3 hosts
+2023-03-28 16:56:29,434 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 16:56:29,434 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 16:56:29,434 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-28 16:56:29,434 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 16:56:29,434 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-28 16:56:29,435 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 13:27:31,415 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {'jobs': {'pe1.gs': ['hello_world_1', 'parm1', 'parm2'], 'pe1.eqam7': ['hello_world_2', 'parm3', 'parm4'], 'br1.gs': ['hello_world_1', 'parm5', 'parm6'], 'br1.eqam7': ['hello_world_2']}} on 4 hosts
+2023-03-29 13:27:31,416 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 13:27:31,416 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 13:27:31,416 - nornir.core.task -    ERROR -      start() - Host 'br1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: run_job() got an unexpected keyword argument 'jobs'
+
+2023-03-29 13:27:31,417 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 13:27:31,417 - nornir.core.task -    ERROR -      start() - Host 'pe1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: run_job() got an unexpected keyword argument 'jobs'
+
+2023-03-29 13:27:31,417 - nornir.core.task -    ERROR -      start() - Host 'br1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: run_job() got an unexpected keyword argument 'jobs'
+
+2023-03-29 13:27:31,418 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 13:27:31,418 - nornir.core.task -    ERROR -      start() - Host 'pe1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: run_job() got an unexpected keyword argument 'jobs'
+
+2023-03-29 13:28:17,882 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {'jobs': {'pe1.gs': ['hello_world_1', 'parm1', 'parm2'], 'pe1.eqam7': ['hello_world_2', 'parm3', 'parm4'], 'br1.gs': ['hello_world_1', 'parm5', 'parm6'], 'br1.eqam7': ['hello_world_2']}} on 4 hosts
+2023-03-29 13:28:17,883 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 13:28:17,883 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 13:28:17,884 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 13:28:17,884 - nornir.core.task -    ERROR -      start() - Host 'br1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: run_job() got an unexpected keyword argument 'jobs'
+
+2023-03-29 13:28:17,884 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 13:28:17,885 - nornir.core.task -    ERROR -      start() - Host 'br1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: run_job() got an unexpected keyword argument 'jobs'
+
+2023-03-29 13:28:17,885 - nornir.core.task -    ERROR -      start() - Host 'pe1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: run_job() got an unexpected keyword argument 'jobs'
+
+2023-03-29 13:28:17,885 - nornir.core.task -    ERROR -      start() - Host 'pe1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: run_job() got an unexpected keyword argument 'jobs'
+
+2023-03-29 13:28:28,639 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 3 hosts
+2023-03-29 13:28:28,640 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 13:28:28,640 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 13:28:28,640 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 13:28:28,641 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 13:28:28,641 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 13:28:28,641 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 13:31:28,771 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {'jobs': {'pe1.gs': ['hello_world_1', 'parm1', 'parm2'], 'pe1.eqam7': ['hello_world_2', 'parm3', 'parm4'], 'br1.gs': ['hello_world_1', 'parm5', 'parm6'], 'br1.eqam7': ['hello_world_2']}} on 4 hosts
+2023-03-29 13:31:28,771 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 13:31:28,772 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 13:31:28,772 - nornir.core.task -    ERROR -      start() - Host 'br1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: run_job() got an unexpected keyword argument 'jobs'
+
+2023-03-29 13:31:28,772 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 13:31:28,773 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 13:31:28,773 - nornir.core.task -    ERROR -      start() - Host 'br1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: run_job() got an unexpected keyword argument 'jobs'
+
+2023-03-29 13:31:28,773 - nornir.core.task -    ERROR -      start() - Host 'pe1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: run_job() got an unexpected keyword argument 'jobs'
+
+2023-03-29 13:31:28,773 - nornir.core.task -    ERROR -      start() - Host 'pe1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: run_job() got an unexpected keyword argument 'jobs'
+
+2023-03-29 13:32:01,125 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {'jobs': {'pe1.gs': ['hello_world_1', 'parm1', 'parm2'], 'pe1.eqam7': ['hello_world_2', 'parm3', 'parm4'], 'br1.gs': ['hello_world_1', 'parm5', 'parm6'], 'br1.eqam7': ['hello_world_2']}} on 4 hosts
+2023-03-29 13:32:01,125 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 13:32:01,125 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 13:32:01,126 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 13:32:01,126 - nornir.core.task -    ERROR -      start() - Host 'br1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: run_job() got an unexpected keyword argument 'jobs'
+
+2023-03-29 13:32:01,127 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 13:32:01,127 - nornir.core.task -    ERROR -      start() - Host 'pe1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: run_job() got an unexpected keyword argument 'jobs'
+
+2023-03-29 13:32:01,127 - nornir.core.task -    ERROR -      start() - Host 'br1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: run_job() got an unexpected keyword argument 'jobs'
+
+2023-03-29 13:32:01,127 - nornir.core.task -    ERROR -      start() - Host 'pe1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: run_job() got an unexpected keyword argument 'jobs'
+
+2023-03-29 13:32:17,188 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 13:32:17,188 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 13:32:17,189 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 13:32:17,189 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 13:32:17,190 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 13:32:17,190 - nornir.core.task -    ERROR -      start() - Host 'br1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 43, in run_job
+    job = task.host.data['job'] if isinstance(job, callable) else globals().get(job)
+UnboundLocalError: local variable 'job' referenced before assignment
+
+2023-03-29 13:32:17,190 - nornir.core.task -    ERROR -      start() - Host 'pe1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 43, in run_job
+    job = task.host.data['job'] if isinstance(job, callable) else globals().get(job)
+UnboundLocalError: local variable 'job' referenced before assignment
+
+2023-03-29 13:32:17,190 - nornir.core.task -    ERROR -      start() - Host 'br1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 43, in run_job
+    job = task.host.data['job'] if isinstance(job, callable) else globals().get(job)
+UnboundLocalError: local variable 'job' referenced before assignment
+
+2023-03-29 13:32:17,191 - nornir.core.task -    ERROR -      start() - Host 'pe1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 43, in run_job
+    job = task.host.data['job'] if isinstance(job, callable) else globals().get(job)
+UnboundLocalError: local variable 'job' referenced before assignment
+
+2023-03-29 13:33:00,850 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 13:33:00,850 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 13:33:00,851 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 13:33:00,851 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 13:33:00,851 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 13:33:00,853 - nornir.core.task -    ERROR -      start() - Host 'pe1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 44, in run_job
+    if not isinstance(job, callable):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+2023-03-29 13:33:00,853 - nornir.core.task -    ERROR -      start() - Host 'br1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 44, in run_job
+    if not isinstance(job, callable):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+2023-03-29 13:33:00,854 - nornir.core.task -    ERROR -      start() - Host 'pe1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 44, in run_job
+    if not isinstance(job, callable):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+2023-03-29 13:33:00,854 - nornir.core.task -    ERROR -      start() - Host 'br1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 44, in run_job
+    if not isinstance(job, callable):
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+2023-03-29 13:34:40,056 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 13:34:40,056 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 13:34:40,057 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 13:34:40,057 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 13:34:40,058 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 13:34:40,059 - nornir.core.task -    ERROR -      start() - Host 'br1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 44, in run_job
+    if not isinstance(job, function):
+NameError: name 'function' is not defined
+
+2023-03-29 13:34:40,059 - nornir.core.task -    ERROR -      start() - Host 'pe1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 44, in run_job
+    if not isinstance(job, function):
+NameError: name 'function' is not defined
+
+2023-03-29 13:34:40,059 - nornir.core.task -    ERROR -      start() - Host 'pe1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 44, in run_job
+    if not isinstance(job, function):
+NameError: name 'function' is not defined
+
+2023-03-29 13:34:40,059 - nornir.core.task -    ERROR -      start() - Host 'br1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 44, in run_job
+    if not isinstance(job, function):
+NameError: name 'function' is not defined
+
+2023-03-29 13:35:12,145 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 13:35:12,146 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 13:35:12,146 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 13:35:12,146 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 13:35:12,147 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 13:35:12,147 - nornir.core.task -    ERROR -      start() - Host 'br1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 48, in run_job
+    task.run(task=job, params=params)
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'str' object has no attribute '__name__'
+
+2023-03-29 13:35:12,147 - nornir.core.task -    ERROR -      start() - Host 'pe1.eqam7': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 48, in run_job
+    task.run(task=job, params=params)
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'str' object has no attribute '__name__'
+
+2023-03-29 13:35:12,148 - nornir.core.task -    ERROR -      start() - Host 'pe1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 48, in run_job
+    task.run(task=job, params=params)
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'str' object has no attribute '__name__'
+
+2023-03-29 13:35:12,148 - nornir.core.task -    ERROR -      start() - Host 'br1.gs': task 'run_job' failed with traceback:
+Traceback (most recent call last):
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/opt/netbox/netbox/confabulator/nornir/init_nornir.py", line 48, in run_job
+    task.run(task=job, params=params)
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 161, in run
+    run_task = Task(
+  File "/opt/netbox/venv/lib/python3.9/site-packages/nornir/core/task.py", line 55, in __init__
+    self.name = name or task.__name__
+AttributeError: 'str' object has no attribute '__name__'
+
+2023-03-29 13:35:50,386 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 13:35:50,387 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 13:35:50,387 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-29 13:35:50,388 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 13:35:50,388 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 13:35:50,389 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 13:35:50,388 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 13:35:50,388 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 13:35:50,389 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 13:35:56,483 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 3 hosts
+2023-03-29 13:35:56,484 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 13:35:56,484 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 13:35:56,484 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 13:35:56,484 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 13:35:56,485 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 13:35:56,485 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 13:38:10,268 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 13:38:10,269 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 13:38:10,269 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 13:38:10,269 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-29 13:38:10,270 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 13:38:10,270 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 13:38:10,271 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 13:38:10,271 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 13:38:10,272 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 13:39:52,305 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 13:39:52,305 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 13:39:52,305 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-29 13:39:52,306 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 13:39:52,306 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 13:39:52,306 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 13:39:52,307 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 13:39:52,307 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 13:39:52,306 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 13:50:12,112 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 13:50:12,113 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 13:50:12,113 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 13:50:12,113 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-29 13:50:12,114 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 13:50:12,114 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 13:50:12,114 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 13:50:12,114 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 13:50:12,115 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 13:50:34,991 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 13:50:34,992 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 13:50:34,992 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 13:50:34,992 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-29 13:50:34,992 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 13:50:34,993 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 13:50:34,993 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 13:50:34,994 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 13:50:34,993 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 13:51:45,821 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 13:51:45,821 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 13:51:45,822 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-29 13:51:45,822 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 13:51:45,822 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 13:51:45,823 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 13:51:45,822 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 13:51:45,822 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 13:51:45,823 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 13:52:20,428 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 13:52:20,428 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 13:52:20,429 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-29 13:52:20,429 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 13:52:20,429 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 13:52:20,430 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 13:52:20,429 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 13:52:20,429 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 13:52:20,430 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 13:52:42,029 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 13:52:42,029 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 13:52:42,030 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-29 13:52:42,030 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 13:52:42,030 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 13:52:42,030 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 13:52:42,030 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 13:52:42,031 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 13:52:42,031 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 13:53:08,553 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 13:53:08,554 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 13:53:08,554 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-29 13:53:08,555 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 13:53:08,555 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 13:53:08,555 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 13:53:08,555 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 13:53:08,555 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 13:53:08,556 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 13:53:27,997 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 13:53:27,997 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 13:53:27,998 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-29 13:53:27,998 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 13:53:27,998 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 13:53:27,998 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 13:53:27,999 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 13:53:27,998 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 13:53:27,999 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 13:53:42,502 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 13:53:42,503 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 13:53:42,503 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-29 13:53:42,503 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 13:53:42,504 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 13:53:42,504 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 13:53:42,504 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 13:53:42,504 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 13:53:42,504 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 13:55:14,892 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 13:55:14,893 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 13:55:14,893 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 13:55:14,893 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-29 13:55:14,893 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 13:55:14,894 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 13:55:14,894 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 13:55:14,894 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 13:55:14,893 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 13:57:27,154 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 13:57:27,154 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 13:57:27,155 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-29 13:57:27,155 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 13:57:27,155 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 13:57:27,155 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 13:57:27,156 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 13:57:27,156 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 13:57:27,156 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 14:00:23,324 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 14:00:23,325 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 14:00:23,325 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-29 14:00:23,325 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 14:00:23,326 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 14:00:23,326 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 14:00:23,326 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 14:00:23,326 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 14:00:23,326 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 14:02:30,627 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 14:02:30,628 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 14:02:30,628 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 14:02:30,628 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-29 14:02:30,629 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 14:02:30,629 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 14:02:30,629 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 14:02:30,629 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 14:02:30,630 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 14:03:49,240 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 14:03:49,241 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 14:03:49,241 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-29 14:03:49,241 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 14:03:49,242 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 14:03:49,242 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 14:03:49,242 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 14:03:49,242 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 14:03:49,243 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 14:05:25,038 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 14:05:25,038 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 14:05:25,039 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 14:05:25,039 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-29 14:05:25,039 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 14:05:25,039 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 14:05:25,040 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 14:05:25,040 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 14:05:25,040 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 14:06:14,200 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 14:06:14,200 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 14:06:14,200 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-29 14:06:14,200 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 14:06:14,201 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 14:06:14,201 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 14:06:14,201 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 14:06:14,201 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 14:06:14,202 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 14:07:36,890 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 14:07:36,890 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 14:07:36,890 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-29 14:07:36,891 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 14:07:36,891 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 14:07:36,891 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 14:07:36,891 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 14:07:36,891 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 14:07:36,892 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 14:10:12,423 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 14:10:12,423 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 14:10:12,424 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-29 14:10:12,424 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 14:10:12,424 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 14:10:12,424 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 14:10:12,424 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 14:10:12,425 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 14:10:12,425 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 14:11:39,935 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 14:11:39,935 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 14:11:39,935 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 14:11:39,935 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-29 14:11:39,936 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 14:11:39,936 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 14:11:39,936 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 14:11:39,936 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 14:11:39,936 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 14:20:07,575 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-29 14:20:07,575 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-29 14:20:07,575 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-29 14:20:07,576 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 14:20:07,576 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 14:20:07,576 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 14:20:07,576 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 14:20:07,577 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 14:20:07,576 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 14:42:03,855 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 3 hosts
+2023-03-29 14:42:03,855 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 14:42:03,856 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 14:42:03,856 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 14:42:03,856 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 14:42:03,856 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 14:42:03,856 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 14:49:44,287 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 3 hosts
+2023-03-29 14:49:44,287 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 14:49:44,287 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 14:49:44,288 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 14:49:44,288 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 14:49:44,288 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 14:49:44,288 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
+2023-03-29 15:02:11,599 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 3 hosts
+2023-03-29 15:02:11,599 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-29 15:02:11,600 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-29 15:02:11,600 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-29 15:02:11,600 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-29 15:02:11,600 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-29 15:02:11,600 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'

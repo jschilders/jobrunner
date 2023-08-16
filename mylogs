@@ -1,0 +1,9 @@
+2023-03-28 15:34:33,073 -  nornir.core -     INFO -        run() - Running task 'run_job' with args {} on 4 hosts
+2023-03-28 15:34:33,073 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'run_job'
+2023-03-28 15:34:33,074 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'run_job'
+2023-03-28 15:34:33,074 - nornir.core.task -    DEBUG -      start() - Host 'br1.eqam7': running task 'hello_world_2'
+2023-03-28 15:34:33,074 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'run_job'
+2023-03-28 15:34:33,074 - nornir.core.task -    DEBUG -      start() - Host 'br1.gs': running task 'hello_world_1'
+2023-03-28 15:34:33,075 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'run_job'
+2023-03-28 15:34:33,075 - nornir.core.task -    DEBUG -      start() - Host 'pe1.eqam7': running task 'hello_world_2'
+2023-03-28 15:34:33,075 - nornir.core.task -    DEBUG -      start() - Host 'pe1.gs': running task 'hello_world_1'
