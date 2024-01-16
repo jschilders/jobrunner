@@ -1,4 +1,4 @@
-from netbox.confabulator.jobrunner.jobrunner import select_devices, run_job, hello_world_1, hello_world_2
+from jobrunner import select_devices, run_job, hello_world_1, hello_world_2
 from nornir_utils.plugins.functions import print_result
 
 # hostname, task, parameters
